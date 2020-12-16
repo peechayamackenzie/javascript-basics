@@ -51,7 +51,7 @@ const startsWith = (char, string) => {
 };
 
 const containsVowels = string => {
-  return string.match(/a/e/i/o/u/gi) !== null;
+  return string.match(/(a|e|i|o|u)/gi) !== null;
 };
 
 const isLowerCase = string => {
