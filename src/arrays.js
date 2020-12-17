@@ -1,61 +1,63 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index %array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString(',');
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.toString().split(',');
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(x => x.toUpperCase());
 };
 
-const reverseWordsInArray = strings => {
-  // your code here
+function reverseWordsInArray(strings) {
+  return strings.map(a => a.split("").reverse().join(""));
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(even => (even % 2) !== 1);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter(remove => remove !== array[index]);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(vowelstring => vowelstring.match(/^(a|e|i|o|u)/gi));
 };
+// ^is for first charactor
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace( /\s/g, '');
 };
+// \s is 'whitespace'
 
 const sumNumbers = numbers => {
-  // your code here
+  return numbers.reduce((acc, number) => (acc + number), 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 };
 
 module.exports = {
