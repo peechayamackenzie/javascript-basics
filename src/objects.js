@@ -1,42 +1,55 @@
+const numbers = require("./numbers");
+
 const createPerson = (name, age) => {
-  // your code here
+  return person = {
+    name: name, 
+    age: age
+  };
 };
 
 const getName = object => {
-  // your code here
+  return object.name;
 };
 
 const getProperty = (property, object) => {
-  // your code here
+  return object.age;
 };
 
 const hasProperty = (property, object) => {
-  // your code here
+  return property in object;
 };
 
 const isOver65 = person => {
-  // your code here
+  return person.age > 65;
 };
 
 const getAges = people => {
-  // your code here
+  return people.map(a => a.age);
 };
 
 const findByName = (name, people) => {
-  // your code here
+  return people.find(names => names.name === name);
 };
 
 const findHondas = cars => {
-  // your code here
+  return cars.filter(honda => honda.manufacturer === 'Honda');
 };
 
 const averageAge = people => {
-  // your code here
+  let Age = people.map(a => a.age);
+  totalage = Age.reduce((acc, age) => (acc + age), 0);
+  return totalage / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
-};
+  this.name = name;
+  this.age = age;
+  this.introduce = (Fred) => {
+      return "Hi " + Fred + ", my name is " + this.name + " and I am " + this.age + "!"
+    }
+   return this;
+  };
+ 
 
 module.exports = {
   createPerson,
